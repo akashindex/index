@@ -4,13 +4,13 @@ import {
   Vector3,
   HemisphericLight,
   MeshBuilder,
+  SceneLoader,
 } from "@babylonjs/core";
 import { SceneComponent } from "./SceneComponent"; // uses above component in same directory
 import { registerUserInput } from "./userInput";
 // import SceneComponent from 'babylonjs-hook'; // if you install 'babylonjs-hook' NPM.
 //import "./App.css";
 export var camera = null;
-
 
 const onSceneReady = (scene) => {
   // This creates and positions a free camera (non-mesh)
@@ -41,6 +41,15 @@ const onSceneReady = (scene) => {
   box2.position.x = 2;
   box3.position.y = 0.25;
   box3.position.x = -2;
+  SceneLoader.LoadAssetContainer(
+    './src/asset',
+    'room.glb',
+    scene,
+    (avatarContainer) => {
+        avatarContainer.addAllToScene()
+        
+    }
+)
 
   // Our built-in 'ground' shape.
   MeshBuilder.CreateGround("ground", { width: 6, height: 6 }, scene);

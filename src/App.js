@@ -1,13 +1,13 @@
 import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
 import './stylesheets/main.scss';
 import { BabylonScene } from './features/babylon/BabylonScene';
+import MainLayout from './components/Layouts/Layout';
 
 function App() {
   return (
     <div className="app">
-      <BabylonScene />
+      {/* <BabylonScene /> */}
+      <MainLayout />
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <Counter />
