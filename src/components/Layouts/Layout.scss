@@ -1,0 +1,31 @@
+.layout {
+  .layout_sider {
+    background-color: #fff;
+    border-right: 1px solid #e8e8e8;
+    height: 100vh;
+    overflow: auto;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    .sider-menu {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .ant-menu-item {
+        padding: 0 20px;
+        height: 50px;
+        line-height: 50px;
+        .anticon {
+          font-size: 20px;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+  .site-layout {
+    margin-left: 200px;
+    height: 100vh;
+  }
+}

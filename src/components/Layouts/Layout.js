@@ -15,18 +15,9 @@ const { Header, Content, Footer } = Layout;
 const MainLayout = () => {
   return (
     <Router>
-    <Layout hasSider>
-      <Sider
-        style={{
-          overflow: 'auto',
-          height: '100vh',
-          position: 'fixed',
-          left: 0,
-          top: 0,
-          bottom: 0,
-        }}
-      >
-          <Menu theme="dark" mode="verticle" defaultSelectedKeys={['1']}>
+    <Layout hasSider className='layout'>
+      <Sider className='layout_sider'>
+          <Menu className='sider-menu' mode="verticle" defaultSelectedKeys={['1']}>
             <Menu.Item key="1" icon={<HomeOutlined />}>
               <Link to="/">Home</Link>
             </Menu.Item>
@@ -43,9 +34,6 @@ const MainLayout = () => {
       </Sider>
       <Layout
         className="site-layout"
-        style={{
-          marginLeft: 200,
-        }}
       >
         <Header
           style={{

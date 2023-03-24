@@ -14,7 +14,16 @@ const root = createRoot(container);
 
 root.render(
   <React.StrictMode>
-    <ConfigProvider locale={enUS}>
+    <ConfigProvider locale={enUS} theme={{
+      "token": {
+        "colorPrimary": "#1e88e5",
+        "colorTextBase": "#363636",
+        "colorBgBase": "#f5f5f5",
+        "colorSuccess": "#4caf50",
+        "colorWarning": "#ffc107",
+        "wireframe": false
+      }
+    }}>
       <Provider store={store}>
         <App />
       </Provider>
