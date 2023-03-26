@@ -9,50 +9,32 @@ import Projects from '../../Pages/Projects/Projects';
 import Bio from '../../Pages/Bio/Bio';
 import Sider from 'antd/es/layout/Sider';
 import Blogs from '../../Pages/Blogs/Blogs';
+import MainPage from '../../Pages/MainPage/MainPage';
+import Sidebar from '../SideBar/SideBar';
 
 const { Header, Content, Footer } = Layout;
 
 const MainLayout = () => {
   return (
     <Router>
-    <Layout hasSider className='layout'>
-      <Sider className='layout_sider'>
-          <Menu className='sider-menu' mode="verticle" defaultSelectedKeys={['1']}>
-            <Menu.Item key="1" icon={<HomeOutlined />}>
-              <Link to="/">Home</Link>
-            </Menu.Item>
-            <Menu.Item key="2" icon={<AppstoreOutlined />}>
-              <Link to="/projects">Projects</Link>
-            </Menu.Item>
-            <Menu.Item key="3" icon={<UserOutlined />}>
-              <Link to="/bio">Bio</Link>
-            </Menu.Item>
-            <Menu.Item key="4" icon={<BookOutlined />}>
-              <Link to="/blogs">Blogs</Link>
-            </Menu.Item>
-          </Menu>
-      </Sider>
+      <Layout hasSider className='layout'>
+        <Sidebar/>
       <Layout
         className="site-layout"
       >
-        <Header
+        {/* <Header
           style={{
             padding: 0,
             background: 'white',
           }}
-        />
+        /> */}
         <Content
           style={{
             margin: '24px 16px 0',
-            overflow: 'initial',
+            //overflow: 'initial',
           }}
-        >
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/projects" element={<Projects />} />
-              <Route path="/bio" element={<Bio />} />
-              <Route path="/blogs" element={<Blogs />} />
-          </Routes>
+          >
+            <MainPage />
         </Content>
         <Footer
           style={{
@@ -63,30 +45,6 @@ const MainLayout = () => {
         </Footer>
       </Layout>
     </Layout>
-      {/* <Layout className="layout">
-        
-        <Header>
-          <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['1']}>
-            <Menu.Item key="1" icon={<HomeOutlined />}>
-              <Link to="/">Home</Link>
-            </Menu.Item>
-            <Menu.Item key="2" icon={<AppstoreOutlined />}>
-              <Link to="/projects">Projects</Link>
-            </Menu.Item>
-            <Menu.Item key="3" icon={<UserOutlined />}>
-              <Link to="/bio">Bio</Link>
-            </Menu.Item>
-          </Menu>
-        </Header>
-        <Content>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/bio" element={<Bio />} />
-          </Routes>
-        </Content>
-        <Footer>Personal Portfolio ©2023 Created by Your Name</Footer>
-      </Layout> */}
     </Router>
   );
 };

@@ -16,11 +16,12 @@ root.render(
   <React.StrictMode>
     <ConfigProvider locale={enUS} theme={{
       "token": {
-        "colorPrimary": "#1e88e5",
-        "colorTextBase": "#363636",
-        "colorBgBase": "#f5f5f5",
-        "colorSuccess": "#4caf50",
-        "colorWarning": "#ffc107",
+        "colorPrimary": "#42a5f5",
+        "colorTextBase": "#f1f1f1",
+        "colorBgBase": "#1c1c1e",
+        "colorSuccess": "#66bb6a",
+        "colorWarning": "#ff9f00",
+        "colorInfo": "#42a5f5",
         "wireframe": false
       }
     }}>
