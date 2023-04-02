@@ -1,7 +1,0 @@
-const ANIMATION_FORCUS_RADIUS = 5;
-
-
-
-export {
-    ANIMATION_FORCUS_RADIUS
-}
