@@ -1,5 +1,19 @@
+varying vec3 vColor;
 void main() {
-    vec3 color = vec3(v0: 1., v1: 0., v2: 0.);
-    gl_FragColor = vec4(v0: color, v1: 1.);
+    // 
+    float strength = distance(gl_PointCoord, vec2(0.5, 0.5));
+    float dis = length(gl_PointCoord - vec2(0.5, 0.5));
+    dis = smoothstep(0.5, 0.0, dis);
+    strength = step(0.5, strength);
+    strength = 1.0 - strength;
+
+    if(strength == 0.0) {
+        discard;
+    }
+    if(dis == 0.0) {
+        discard;
+    }
+
+    gl_FragColor = vec4(vColor, strength * dis);
 }
 
