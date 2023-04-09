@@ -1,0 +1,78 @@
+@import "../../stylesheets/abstracts/variables";
+
+.navagation {
+  z-index: 999999999;
+  position: fixed;
+  top: 50%;
+  width: auto;
+  height: 600px;
+  left: 20px;
+  &:hover {
+    .list-item {
+      span {
+        color: $color-not-selected;
+      }
+    }
+  }
+  li {
+    height: 20px;
+    margin: 30px 0px;
+    list-style: none;
+    .list-item {
+      display: flex;
+      align-items: center;
+      padding: 5px;
+      text-decoration: none;
+      cursor: pointer;
+      //color: transparent;
+      &.selected {
+        .indicator {
+          border: 3px solid $color-selected;
+          color: $color-selected;
+          width: 10px;
+          height: 10px;
+        }
+        span {
+          color: $color-selected;
+        }
+      }
+      &:hover {
+        .indicator {
+          border: 3px solid $color-selected;
+          color: $color-selected;
+        }
+        span {
+          color: $color-selected;
+        }
+      }
+      &.active {
+        .indicator {
+          border: 3px solid $color-selected;
+          color: $color-selected;
+        }
+        span {
+          color: $color-selected;
+        }
+      }
+      .indicator {
+        display: block;
+        transition: width height 1s ease;
+        width: 5px;
+        height: 5px;
+        border-radius: 25px;
+        -moz-border-radius: 25px;
+        -webkit-border-radius: 25px;
+        background-color: transparent;
+        border: 3px solid $color-not-selected;
+        transition: all 0.3s ease;
+        color: $color-not-selected;
+      }
+      span {
+        color: transparent;
+        transition: color 1s;
+        //color: $color-not-selected;
+        padding: 0px 10px;
+      }
+    }
+  }
+}

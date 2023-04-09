@@ -11,10 +11,10 @@ export const ThreeJsCanvas: React.FC<ThreeJsCanvasWapperProps> = () => {
   useEffect(() => {
     const { current } = reactCanvasWrapper;
     if (current && !hasInit) {
-      hasInit = true;
-      const view = new View(current);
-      view.init();
-      view.animate();
+      // hasInit = true;
+      // const view = new View(current);
+      // view.init();
+      // view.animate();
     }
   }, []);
 

@@ -1,13 +1,12 @@
-import React from "react";
-import logo from "./logo.svg";
-import { Counter } from "./features/counter/Counter";
-import "./App.css";
+import "./stylesheets/main.scss";
+import { Layout } from "./features/layout/Layout";
 import { ThreeJsCanvas } from "./features/threejs/ThreeJsCanvas";
 
 function App() {
   return (
     <div className="App">
-      <ThreeJsCanvas />
+      <Layout />
+      {/* <ThreeJsCanvas /> */}
     </div>
   );
 }

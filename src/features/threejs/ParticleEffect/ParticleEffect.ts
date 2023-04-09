@@ -39,7 +39,7 @@ export class ParticleEffects {
     this.size = new Float32Array(this.pointNumber);
     this.bufferGeometry.setAttribute(
       "size",
-      new THREE.BufferAttribute(this.size, 1)
+      new THREE.BufferAttribute(this.size, 2)
     );
 
     this.color = new Float32Array(this.pointNumber * 3);

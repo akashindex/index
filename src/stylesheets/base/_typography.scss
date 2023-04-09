@@ -1,0 +1,16 @@
+// @use "../abstracts/variables";
+/**
+ * Basic typography style for copy text
+ */
+body {
+  color: $text-color;
+  font: normal 125% / 1.4 $text-font-stack;
+}
+
+/**
+ * golbal styles
+ */
+p {
+  font-family: $text-font-stack;
+  font-weight: map-get($font-weight, "regular");
+}

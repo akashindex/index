@@ -4,7 +4,7 @@ import { Provider } from "react-redux";
 import { store } from "./app/store";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import "./index.css";
+import View from "./features/threejs/View";
 
 const container = document.getElementById("root")!;
 const root = createRoot(container);
@@ -16,6 +16,9 @@ root.render(
     </Provider>
   </React.StrictMode>
 );
+const view = new View();
+view.init();
+view.animate();
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
