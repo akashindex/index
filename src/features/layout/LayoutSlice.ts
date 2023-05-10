@@ -1,6 +1,5 @@
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { RootState } from "../../app/store";
-import { fetchCount } from "./LayoutAPI";
 
 export interface LayoutState {
   sections: string[];
@@ -20,6 +19,8 @@ export const layoutSlice = createSlice({
     setCurrentSection: (state, action: PayloadAction<number>) => {
       if (action.payload < state.sections.length && action.payload >= 0) {
         state.currentSection = action.payload;
+        // eslint-disable-next-line no-restricted-globals
+        location.hash = "#" + state.sections[state.currentSection];
       }
     },
   },

@@ -12,7 +12,7 @@ export default class View {
   private renderer: THREE.WebGLRenderer;
   private scene: THREE.Scene;
   private camera: THREE.PerspectiveCamera;
-  //private controls: OrbitControls;
+  private controls: OrbitControls;
   particleEffects: ParticleEffects;
   progress: number;
   HEIGHT: number;
@@ -39,19 +39,16 @@ export default class View {
 
     this.renderer.setSize(window.innerWidth, window.innerHeight);
     this.wrapper.appendChild(this.renderer.domElement);
-    //this.controls = new OrbitControls(this.camera, this.renderer.domElement);
+    this.controls = new OrbitControls(this.camera, this.renderer.domElement);
 
-    this.camera.position.z = 50;
+    this.camera.position.z = 20;
     this.particleEffects = new ParticleEffects(10000);
     this.scene.add(this.particleEffects.particle);
     this.progress = 0;
-    setTimeout(() => {
-      this.progress = 0;
-      this.particleEffects.to(
-        new THREE.BoxGeometry(20, 20, 20, 30, 30, 30),
-        new THREE.Color("#fff")
-      );
-    }, 2000);
+    this.particleEffects.to(
+      new THREE.BoxGeometry(20, 20, 20, 30, 30, 30),
+      new THREE.Color("#fff")
+    );
   }
   private handleWindowResize() {
     this.HEIGHT = window.innerHeight;
