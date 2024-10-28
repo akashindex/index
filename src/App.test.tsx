@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'; // Ensure React is imported
 import { render } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import { store } from './app/store';

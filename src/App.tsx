@@ -1,3 +1,4 @@
+import React from 'react';
 import "./stylesheets/main.scss";
 import { Layout } from "./features/layout/Layout";
 import { ThreeJsCanvas } from "./features/threejs/ThreeJsCanvas";
