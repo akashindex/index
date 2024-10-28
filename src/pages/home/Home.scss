@@ -1,2 +1,36 @@
-.home {
+$base-color: #ffffff;
+
+
+
+
+
+
+.home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+.colgroup-Heading{
+    color: $base-color;
+    font-weight: 900;
+
+}
+.colgroup-text{
+    color: $base-color;
+    font-weight: 900;
+}
+.btnn{
+    padding: 16px;
+    color: black;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    border-radius: 2px;
+}
+
+.btnn:hover{
+    color: #ffffff;
+    background: #000000;
+    transition: 0.7s;
+}
+
