@@ -1,86 +1,45 @@
 // Color Variables
 $base-color: #ffffff;
-$dark-bg: black;
+$dark-bg: #181818;
 $btnn-color: linear-gradient(to bottom right, #7A7FBA, #11C37C);
+$card-bg: #2c2c2c;
+$tag-bg: rgba(122, 127, 186, 0.15);
+$shadow-color: rgba(0, 0, 0, 0.25);
 
-// Container Styling
 *,
 *::before,
 *::after {
-    box-sizing: border-box; // Ensures padding and borders are within element width
-}
-
-html,
-body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    overflow-x: hidden; // Avoids horizontal overflow on the whole page
+  box-sizing: border-box;
 }
 
 .home {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-    overflow-y: auto; // Vertical scroll
-    overflow-x: auto; // Horizontal scroll when content overflows width
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
 }
 
-// Home About Section
 .home-about {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    padding: 20px;
-}
+  text-align: center;
+  margin-bottom: 3rem;
 
-.colgroup-Heading {
+  .colgroup-Heading {
     color: $base-color;
+    font-size: 2.5rem;
     font-weight: 900;
-}
+  }
 
-.colgroup-text {
-    color: $base-color;
+  .colgroup-text {
+    color: lighten($base-color, 30%);
+    font-size: 1.125rem;
     font-weight: 400;
+  }
+
 }
 
-.card-heading {
-    color: $base-color;
-    font-weight: 700;
-    font-weight: bold;
-}
-
-
-// Cards Container
-.cards-about {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap; // Prevents wrapping for horizontal scrolling
-    gap: 20px;
-    padding: 0 20px;
-    overflow-x: auto; // Horizontal scroll on the card container
-}
-
-// Individual Card Styling
-.card-1 {
-    min-width: 300px; // Fixed width to ensure cards stay aligned for horizontal scroll
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    text-align: center;
-    background-color: $dark-bg;
-}
-
-// Home Main Section
-.home-main {
-    width: 100%;
-    margin-top: 60px;
-}
-
-// Button Inside Card
 .btnn-slash {
+    color:$base-color ;
     margin: 44px 0 0 0;
     padding: 15px 20px;
     font-size: 18px;
@@ -126,5 +85,78 @@ body {
         transform: translateZ(-1px);
       }
     }
+    
   }
-  
+
+.home-main {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+// Card Component Styling
+.card {
+  background-color: $card-bg;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+
+  &:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  }
+
+  .image {
+    display: block;
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px 10px 0 0;
+    }
+  }
+
+  .text {
+    padding: 1rem;
+    color: $base-color;
+
+    .cardHeading {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .colgroupText {
+      font-size: 0.95rem;
+      color: lighten($base-color, 25%);
+      margin-bottom: 1rem;
+    }
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0 1rem 1rem;
+
+    .tag {
+      background: $tag-bg;
+      color: $base-color;
+      font-size: 0.8rem;
+      padding: 0.25rem 0.75rem;
+      border-radius: 5px;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+  }
+}
