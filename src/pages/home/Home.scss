@@ -7,101 +7,124 @@ $btnn-color: linear-gradient(to bottom right, #7A7FBA, #11C37C);
 *,
 *::before,
 *::after {
-  box-sizing: border-box; // Ensures padding and borders are within element width
+    box-sizing: border-box; // Ensures padding and borders are within element width
 }
 
 html,
 body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  overflow-x: hidden; // Avoids horizontal overflow on the whole page
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden; // Avoids horizontal overflow on the whole page
 }
 
 .home {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 100vh;
-  overflow-y: auto; // Vertical scroll
-  overflow-x: auto; // Horizontal scroll when content overflows width
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    overflow-y: auto; // Vertical scroll
+    overflow-x: auto; // Horizontal scroll when content overflows width
 }
 
 // Home About Section
 .home-about {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
 }
 
 .colgroup-Heading {
-  color: $base-color;
-  font-weight: 900;
+    color: $base-color;
+    font-weight: 900;
 }
 
 .colgroup-text {
-  color: $base-color;
-  font-weight: 400;
+    color: $base-color;
+    font-weight: 400;
 }
+
 .card-heading {
     color: $base-color;
     font-weight: 700;
     font-weight: bold;
-  }
-
-// Main Button Styles
-.btnn {
-  padding: 16px;
-  color: $dark-bg;
-  font-weight: 600;
-  cursor: pointer;
-  border: none;
-  border-radius: 2px;
-  background: $btnn-color;
-  transition: 0.7s;
-
-  &:hover {
-    color: $base-color;
-    background: $dark-bg;
-    transition:0.7s;
-  }
 }
+
 
 // Cards Container
 .cards-about {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap; // Prevents wrapping for horizontal scrolling
-  gap: 20px;
-  padding: 0 20px;
-  overflow-x: auto; // Horizontal scroll on the card container
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap; // Prevents wrapping for horizontal scrolling
+    gap: 20px;
+    padding: 0 20px;
+    overflow-x: auto; // Horizontal scroll on the card container
 }
 
 // Individual Card Styling
 .card-1 {
-  min-width: 300px; // Fixed width to ensure cards stay aligned for horizontal scroll
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  text-align: center;
-  background-color: $dark-bg;
+    min-width: 300px; // Fixed width to ensure cards stay aligned for horizontal scroll
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    background-color: $dark-bg;
 }
 
 // Home Main Section
 .home-main {
-  width: 100%;
-  margin-top: 60px;
+    width: 100%;
+    margin-top: 60px;
 }
 
 // Button Inside Card
 .btnn-slash {
-  background: $btnn-color;
-  color: $base-color;
-  padding: 15px 20px;
-  font-size: 18px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
+    margin: 44px 0 0 0;
+    padding: 15px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transform: scale(0.75) rotateY(-30deg) rotateX(45deg) translateZ(4.5rem);
+    transform-origin: 50% 100%;
+    transform-style: preserve-3d;
+    box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.25);
+    transition: 0.6s ease transform;
+    background:$btnn-color;
+  
+    &:hover {
+      transform: scale(1);
+    }
+  
+    &::before,
+    &::after {
+      content: " ";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s ease;
+    }
+  
+    &::before {
+      transform: translateZ(4rem);
+      border: 5px solid #7A7FBA;
+      &:hover {
+        transform: translateZ(0);
+      }
+    }
+  
+    &::after {
+      transform: translateZ(-4rem);
+      background:linear-gradient(to bottom right, #11C37C,#7A7FBA);
+      box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.25);
+      &:hover {
+        transform: translateZ(-1px);
+      }
+    }
+  }
+  
