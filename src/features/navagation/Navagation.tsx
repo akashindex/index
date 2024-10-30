@@ -21,7 +21,7 @@ export function Navagation() {
                 handleClick(0);
               }}
             >
-              <div className="indicator" />
+              {/* <div className="indicator" /> */}
               <span>Home</span>
             </a>
           </li>
@@ -35,7 +35,7 @@ export function Navagation() {
                 handleClick(1);
               }}
             >
-              <div className="indicator" />
+              {/* <div className="indicator" /> */}
               <span>Projects</span>
             </a>
           </li>
@@ -49,7 +49,7 @@ export function Navagation() {
                 handleClick(2);
               }}
             >
-              <div className="indicator" />
+              {/* <div className="indicator" /> */}
               <span>Contact</span>
             </a>
           </li>

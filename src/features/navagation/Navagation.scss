@@ -26,12 +26,12 @@
       cursor: pointer;
       //color: transparent;
       &.selected {
-        .indicator {
-          border: 3px solid $color-selected;
-          color: $color-selected;
-          width: 10px;
-          height: 10px;
-        }
+        // .indicator {
+        //   border: 3px solid $color-selected;
+        //   color: $color-selected;
+        //   width: 10px;
+        //   height: 10px;
+        // }
         span {
           color: $color-selected;
         }
