@@ -1,53 +1,107 @@
+// Color Variables
 $base-color: #ffffff;
-$dark-bg:black;
-$btnn-color:linear-gradient(to bottom right, #7A7FBA, #11C37C);;
+$dark-bg: black;
+$btnn-color: linear-gradient(to bottom right, #7A7FBA, #11C37C);
 
-
-
-
-
-.home-about{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+// Container Styling
+*,
+*::before,
+*::after {
+  box-sizing: border-box; // Ensures padding and borders are within element width
 }
-.colgroup-Heading{
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden; // Avoids horizontal overflow on the whole page
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  overflow-y: auto; // Vertical scroll
+  overflow-x: auto; // Horizontal scroll when content overflows width
+}
+
+// Home About Section
+.home-about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.colgroup-Heading {
+  color: $base-color;
+  font-weight: 900;
+}
+
+.colgroup-text {
+  color: $base-color;
+  font-weight: 400;
+}
+.card-heading {
     color: $base-color;
-    font-weight: 900;
+    font-weight: 700;
+    font-weight: bold;
+  }
 
-}
-.colgroup-text{
+// Main Button Styles
+.btnn {
+  padding: 16px;
+  color: $dark-bg;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  border-radius: 2px;
+  background: $btnn-color;
+  transition: 0.7s;
+
+  &:hover {
     color: $base-color;
-    font-weight: 900;
-}
-.btnn{
-    padding: 16px;
-    color:$dark-bg;
-    font-weight: 600;
-    cursor: pointer;
-    border: none;
-    border-radius: 2px;
+    background: $dark-bg;
+    transition:0.7s;
+  }
 }
 
-.btnn:hover{
-    color:$base-color;
-    background:$dark-bg;
-    transition: 0.7s;
+// Cards Container
+.cards-about {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap; // Prevents wrapping for horizontal scrolling
+  gap: 20px;
+  padding: 0 20px;
+  overflow-x: auto; // Horizontal scroll on the card container
 }
-.cards-about{
-    display: flex;
-    flex-direction: row;
+
+// Individual Card Styling
+.card-1 {
+  min-width: 300px; // Fixed width to ensure cards stay aligned for horizontal scroll
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  background-color: $dark-bg;
 }
-.home-main{
-    margin-top:60px ;
+
+// Home Main Section
+.home-main {
+  width: 100%;
+  margin-top: 60px;
 }
-.btnn-slash{
+
+// Button Inside Card
+.btnn-slash {
   background: $btnn-color;
   color: $base-color;
   padding: 15px 20px;
   font-size: 18px;
   border: none;
-  border: 2px;
-
+  border-radius: 4px;
+  cursor: pointer;
 }
-

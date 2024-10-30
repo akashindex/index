@@ -17,8 +17,8 @@ export function Home() {
               <img src={img} alt="" />
             </span>
             <span className="text">
-              <h2>Website Design</h2>
-              <p>Our approach to website design is to create a website that strengthens your company’s brand while ensuring ease of use and simplicity for your audience.</p>
+              <h2 className="card-heading">Website Design</h2>
+              <p className="colgroup-text">Our approach to website design is to create a website that strengthens your company’s brand while ensuring ease of use and simplicity for your audience.</p>
             </span>
             <button className="btnn-slash">learn more</button>
           </div>
@@ -27,8 +27,8 @@ export function Home() {
               <img src={img} alt="" />
             </span>
             <span className="text">
-              <h2>Website Design</h2>
-              <p>Our approach to website design is to create a website that strengthens your company’s brand while ensuring ease of use and simplicity for your audience.</p>
+              <h2 className="card-heading">Website Design</h2>
+              <p className="colgroup-text">Our approach to website design is to create a website that strengthens your company’s brand while ensuring ease of use and simplicity for your audience.</p>
             </span>
             <button className="btnn-slash">learn more</button>
           </div>
@@ -37,8 +37,8 @@ export function Home() {
               <img src={img} alt="" />
             </span>
             <span className="text">
-              <h2>Website Design</h2>
-              <p>Our approach to website design is to create a website that strengthens your company’s brand while ensuring ease of use and simplicity for your audience.</p>
+              <h2 className="card-heading">Website Design</h2>
+              <p  className="colgroup-text">Our approach to website design is to create a website that strengthens your company’s brand while ensuring ease of use and simplicity for your audience.</p>
             </span>
             <button className="btnn-slash">learn more</button>
           </div>
