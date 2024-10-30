@@ -6,13 +6,16 @@
   top: 50%;
   width: auto;
   height: 600px;
-  left: 20px;
+  padding: 0 !important;
   &:hover {
     .list-item {
       span {
         color: $color-not-selected;
       }
     }
+  }
+  ul{
+    padding: 0;
   }
   li {
     height: 20px;
@@ -53,19 +56,6 @@
         span {
           color: $color-selected;
         }
-      }
-      .indicator {
-        display: block;
-        transition: width height 1s ease;
-        width: 5px;
-        height: 5px;
-        border-radius: 25px;
-        -moz-border-radius: 25px;
-        -webkit-border-radius: 25px;
-        background-color: transparent;
-        border: 3px solid $color-not-selected;
-        transition: all 0.3s ease;
-        color: $color-not-selected;
       }
       span {
         color: transparent;
