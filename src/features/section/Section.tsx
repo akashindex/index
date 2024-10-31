@@ -5,6 +5,7 @@ import { selectCurrentSection } from "../layout/LayoutSlice";
 import { Home } from "../../pages/home/Home";
 import { Projects } from "../../pages/projects/Projects";
 import { Contact } from "../../pages/contact/Contact";
+  
 
 export function Section() {
   const currentSelection = useAppSelector(selectCurrentSection);
@@ -21,6 +22,7 @@ export function Section() {
         return <Home />;
     }
   };
+  
 
   return (
     <section className="section" id={currentSelection}>
