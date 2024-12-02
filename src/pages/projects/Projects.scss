@@ -1,3 +1,133 @@
-.project {
-    text-align: center;
+// Variables
+$background-dark: #000;
+$background-card: #111;
+$text-color: #fff;
+$accent-color: #D3E97A;
+$link-hover-color: #ff0;
+$font-size-large: 1.8rem;
+$font-size-medium: 1.3rem;
+$font-size-small: 1rem;
+$padding: 30px;
+$card-radius: 12px;
+
+// Global styles for consistent behavior
+
+// Projects section
+    .projects {
+        background-color: $background-dark;
+        color: $text-color;
+        padding: 50px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        overflow-x: scroll;
+
+  .project-item {
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: $card-radius;
+    background-color: $background-dark;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+
+    @media (max-width: 768px) {
+      flex-direction: column; // Adjust layout for smaller screens
+    }
+
+    .project-image {
+      flex: 1;
+      max-width: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $background-card;
+      padding: $padding;
+      border-radius: $card-radius;
+
+      img {
+        max-width: 100%;
+        border-radius: 8px;
+      }
+
+      @media (max-width: 768px) {
+        max-width: 100%; // Full width on smaller screens
+      }
+    }
+
+    .project-details {
+      flex: 1;
+      padding: $padding;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      h3 {
+        font-size: $font-size-large;
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-size: $font-size-small;
+        margin-bottom: 20px;
+      }
+
+      .project-info {
+        margin-bottom: 20px;
+
+        h4 {
+          font-size: $font-size-medium;
+          margin-bottom: 10px;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+        }
+
+        ul {
+          list-style: none;
+          padding: 0;
+
+          li {
+            font-size: $font-size-small;
+            margin-bottom: 20px;
+            border-bottom:1px solid #484848 !important;
+            padding:16px 0;
+
+            strong {
+              color: lighten($text-color, 20%);
+            }
+          }
+        }
+      }
+
+      .project-links {
+        display: flex;
+        gap: 20px;
+
+        a {
+          color: $accent-color;
+          text-decoration: none;
+          font-weight: bold;
+          font-size: $font-size-small;
+          display: flex;
+          align-items: center;
+          gap: 5px;
+
+          &:hover {
+            color: $accent-color;
+          }
+
+          &.live-demo {
+            color: $accent-color;
+            text-decoration: underline;
+           
+          }
+
+          &.see-github {
+            color: $accent-color;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
 }

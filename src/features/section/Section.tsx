@@ -24,12 +24,8 @@ export function Section() {
   };
   
 
-  const handleScroll = (event: WheelEvent) => {
-    event.preventDefault();
-  };
-
   return (
-    <section className="section" id={currentSelection} onWheel={handleScroll}>
+    <section className="section" id={currentSelection}>
       {renderSection(currentSelection)}
     </section>
   );
