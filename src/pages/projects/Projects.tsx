@@ -1,6 +1,8 @@
 import React from "react";
 import "./Projects.scss";
 import img33 from "./work.png";
+import img23 from "./image 10.png";
+import img24 from "./image 9.png";
 
 export function Projects() {
   const projects = [
@@ -12,6 +14,7 @@ export function Projects() {
       role: "Front-end Developer",
       liveDemoLink: "#live-demo",
       githubLink: "#see-github",
+      image: img33,
     },
     {
       title: "Blog site for World News",
@@ -20,7 +23,17 @@ export function Projects() {
       year: "2023",
       role: "Front-end Developer",
       liveDemoLink: "#live-demo",
+      image: img23,
+    },
+    {
+      title: "E-commerce product page",
+      description:
+        "Successfully crafted an engaging product page featuring a dynamic lightbox gallery and seamless cart functionality, showcasing proficiency in JavaScript development.",
+      year: "2022",
+      role: "Front-end Developer",
+      liveDemoLink: "#live-demo",
       githubLink: "#see-github",
+      image: img24,
     },
   ];
 
@@ -34,7 +47,7 @@ export function Projects() {
         <div className="project-item" key={index}>
           {/* Left: Image Section */}
           <div className="project-image">
-            <img src={img33} alt={`${project.title} Thumbnail`} />
+            <img src={project.image} alt={`${project.title} Thumbnail`} />
           </div>
 
           {/* Right: Details Section */}

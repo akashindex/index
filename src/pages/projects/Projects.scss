@@ -1,11 +1,12 @@
 // Variables
 $background-dark: #000;
 $background-card: #111;
+$background-morphic:transparent;
 $text-color: #fff;
 $accent-color: #D3E97A;
 $link-hover-color: #ff0;
-$font-size-large: 1.8rem;
-$font-size-medium: 1.3rem;
+$font-size-large: 32px;
+$font-size-medium: 16px;
 $font-size-small: 1rem;
 $padding: 30px;
 $card-radius: 12px;
@@ -13,22 +14,18 @@ $card-radius: 12px;
 // Global styles for consistent behavior
 
 // Projects section
-    .projects {
-        background-color: transparent;
+    .projects {        background-color: transparent;
         color: $text-color;
         padding: 50px 20px;
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
+        flex-direction: column;        width: 100%;
         height: 100vh;
         overflow-x: scroll;
 
   .project-item {
-    display: flex;
-    flex-wrap: wrap;
-    border-radius: $card-radius;
-    background-color: $background-dark;
+    display: flex;  
+    margin-top: 40px;
+    background-color: $background-morphic;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 
     @media (max-width: 768px) {
@@ -76,10 +73,11 @@ $card-radius: 12px;
         margin-bottom: 20px;
 
         h4 {
+          border-bottom: solid 1px #484848;
           font-size: $font-size-medium;
-          margin-bottom: 10px;
           text-transform: uppercase;
           letter-spacing: 1px;
+          padding: 17px 0;
         }
 
         ul {
