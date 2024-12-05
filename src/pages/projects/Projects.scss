@@ -1,7 +1,7 @@
 // Variables
 $background-dark: #000;
 $background-card: #111;
-$background-morphic:transparent;
+$background-morphic: transparent;
 $text-color: #fff;
 $accent-color: #D3E97A;
 $link-hover-color: #ff0;
@@ -14,16 +14,18 @@ $card-radius: 12px;
 // Global styles for consistent behavior
 
 // Projects section
-    .projects {        background-color: transparent;
-        color: $text-color;
-        padding: 50px 20px;
-        display: flex;
-        flex-direction: column;        width: 100%;
-        height: 100vh;
-        overflow-x: scroll;
+.projects {
+  background-color: transparent;
+  color: $text-color;
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  overflow-x: auto;
 
   .project-item {
-    display: flex;  
+    display: flex;
     margin-top: 40px;
     background-color: $background-morphic;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
@@ -87,8 +89,8 @@ $card-radius: 12px;
           li {
             font-size: $font-size-small;
             margin-bottom: 20px;
-            border-bottom:1px solid #484848 !important;
-            padding:16px 0;
+            border-bottom: 1px solid #484848 !important;
+            padding: 16px 0;
 
             strong {
               color: lighten($text-color, 20%);
@@ -117,7 +119,7 @@ $card-radius: 12px;
           &.live-demo {
             color: $accent-color;
             text-decoration: underline;
-           
+
           }
 
           &.see-github {
@@ -126,6 +128,47 @@ $card-radius: 12px;
           }
         }
       }
+    }
+  }
+}
+
+.about-me {
+  display: flex;
+  justify-content: space-between;
+  background-color: #000; // Black background
+  color: #fff; // White text
+  padding: 50px 20px;
+  align-items: center;
+
+  .aboutme-right {
+    width: 71%;
+
+    h2 {
+      font-size: 48px; // Large font size for the heading
+      margin-bottom: 20px; // Space below the heading
+    }
+  }
+
+  // Padding for spacing// Align text to the left
+  .aboutme-right {
+
+    h3 {
+      font-size: 32px;
+      font-weight: 500;
+      color: #FFFFFF;
+    }
+
+    p {
+      font-weight: 400;
+      font-size: 16px; // Standard font size for paragraphs
+      margin-bottom: 0;
+      color: #C7C7C7; // Space below paragraphs
+    }
+
+    .more-about-me {  
+      color: #D3E97A; // Accent color for the link
+      text-decoration: underline; // Remove underline
+      font-weight: bold; // Bold text
     }
   }
 }

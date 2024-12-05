@@ -1,5 +1,6 @@
 import React from "react";
 import "./Projects.scss";
+import { About } from "../../pages/projects/About";
 import img33 from "./work.png";
 import img23 from "./image 10.png";
 import img24 from "./image 9.png";
@@ -76,6 +77,10 @@ export function Projects() {
           </div>
         </div>
       ))}
+
+        <div className="about-section">
+        <About />
+        </div>
     </div>
   );
 }
